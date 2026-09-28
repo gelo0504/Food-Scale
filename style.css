@@ -1,0 +1,986 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef2ff,
+            #f0fdf4
+        );
+
+    color: #172033;
+
+    min-height: 100vh;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.header {
+
+    background:
+        linear-gradient(
+            135deg,
+            #0f172a,
+            #1e3a8a
+        );
+
+    color: white;
+
+    padding: 25px 7%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(15, 23, 42, 0.2);
+}
+
+
+.logo {
+
+    width: 65px;
+
+    height: 65px;
+
+    background:
+        rgba(255,255,255,0.12);
+
+    border:
+        1px solid
+        rgba(255,255,255,0.2);
+
+    border-radius: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 34px;
+}
+
+
+.header h1 {
+
+    font-size: 30px;
+
+    margin-bottom: 5px;
+}
+
+
+.header p {
+
+    color: #cbd5e1;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   MAIN CONTAINER
+===================================================== */
+
+.container {
+
+    width: 92%;
+
+    max-width: 1250px;
+
+    margin: 35px auto;
+
+}
+
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.card {
+
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    margin-bottom: 25px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(15, 23, 42, 0.08);
+
+    border:
+        1px solid #e2e8f0;
+}
+
+
+.section-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    margin-bottom: 20px;
+}
+
+
+.section-title > span {
+
+    width: 45px;
+
+    height: 45px;
+
+    border-radius: 13px;
+
+    background: #eff6ff;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 22px;
+}
+
+
+.section-title h2 {
+
+    font-size: 21px;
+
+    color: #0f172a;
+}
+
+
+.section-title p {
+
+    color: #64748b;
+
+    font-size: 13px;
+
+    margin-top: 4px;
+}
+
+
+/* =====================================================
+   SCALE DISPLAY
+===================================================== */
+
+.scale-display {
+
+    background:
+        linear-gradient(
+            135deg,
+            #020617,
+            #0f172a
+        );
+
+    border-radius: 18px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    color: #38bdf8;
+
+    box-shadow:
+        inset 0 0 25px
+        rgba(56,189,248,0.08);
+
+    margin-bottom: 25px;
+}
+
+
+#weightDisplay {
+
+    font-family:
+        "Courier New",
+        monospace;
+
+    font-size: 55px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+
+#displayUnit {
+
+    font-size: 22px;
+
+    margin-left: 8px;
+}
+
+
+/* =====================================================
+   FORM
+===================================================== */
+
+.form-group {
+
+    margin-bottom: 18px;
+}
+
+
+.form-group label {
+
+    display: block;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    color: #334155;
+
+    margin-bottom: 8px;
+}
+
+
+input,
+select {
+
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border:
+        1px solid #cbd5e1;
+
+    border-radius: 11px;
+
+    background: #f8fafc;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+
+input:focus,
+select:focus {
+
+    border-color: #2563eb;
+
+    box-shadow:
+        0 0 0 3px
+        rgba(37,99,235,0.1);
+
+    background: white;
+}
+
+
+.input-row {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 15px;
+}
+
+
+/* =====================================================
+   IDENTIFICATION
+===================================================== */
+
+.identification {
+
+    margin-top: 8px;
+
+    background: #eff6ff;
+
+    color: #1d4ed8;
+
+    border-left:
+        4px solid #2563eb;
+
+    padding: 11px;
+
+    border-radius: 8px;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.button-row {
+
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr;
+
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+
+button {
+
+    border: none;
+
+    border-radius: 11px;
+
+    padding: 13px 16px;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+}
+
+
+button:hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 7px 15px
+        rgba(0,0,0,0.12);
+}
+
+
+.primary-btn {
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #4f46e5
+        );
+
+    color: white;
+}
+
+
+.secondary-btn {
+
+    background: #e2e8f0;
+
+    color: #334155;
+}
+
+
+.danger-btn {
+
+    background: #fee2e2;
+
+    color: #b91c1c;
+}
+
+
+/* =====================================================
+   DETECTED ITEM
+===================================================== */
+
+.detected-item {
+
+    background:
+        linear-gradient(
+            135deg,
+            #eff6ff,
+            #eef2ff
+        );
+
+    border-radius: 16px;
+
+    padding: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+
+.item-icon {
+
+    width: 65px;
+
+    height: 65px;
+
+    border-radius: 16px;
+
+    background: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 34px;
+
+    box-shadow:
+        0 5px 15px
+        rgba(0,0,0,0.08);
+}
+
+
+.detected-item h3 {
+
+    font-size: 20px;
+
+    margin-bottom: 5px;
+}
+
+
+.detected-item p {
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   INFO GRID
+===================================================== */
+
+.info-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 12px;
+}
+
+
+.info-box {
+
+    padding: 15px;
+
+    border-radius: 12px;
+
+    background: #f8fafc;
+
+    border:
+        1px solid #e2e8f0;
+}
+
+
+.info-box span {
+
+    display: block;
+
+    color: #64748b;
+
+    font-size: 12px;
+
+    margin-bottom: 6px;
+}
+
+
+.info-box strong {
+
+    font-size: 15px;
+
+    color: #0f172a;
+}
+
+
+/* =====================================================
+   NUTRITION MAIN
+===================================================== */
+
+.nutrition-main {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+
+.calorie-box,
+.protein-box {
+
+    padding: 22px;
+
+    border-radius: 16px;
+
+    text-align: center;
+}
+
+
+.calorie-box {
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff7ed,
+            #ffedd5
+        );
+
+    color: #c2410c;
+}
+
+
+.protein-box {
+
+    background:
+        linear-gradient(
+            135deg,
+            #ecfdf5,
+            #d1fae5
+        );
+
+    color: #047857;
+}
+
+
+.calorie-box span,
+.protein-box span {
+
+    display: block;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+
+.calorie-box strong,
+.protein-box strong {
+
+    font-size: 35px;
+}
+
+
+.calorie-box small,
+.protein-box small {
+
+    font-size: 14px;
+
+    margin-left: 4px;
+}
+
+
+/* =====================================================
+   NUTRITION GRID
+===================================================== */
+
+.nutrition-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 12px;
+}
+
+
+.nutrition-item {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 15px;
+
+    border-radius: 13px;
+
+    background: #f8fafc;
+
+    border:
+        1px solid #e2e8f0;
+}
+
+
+.nutrition-label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+.nutrition-label > span {
+
+    font-size: 23px;
+}
+
+
+.nutrition-label b {
+
+    display: block;
+
+    font-size: 13px;
+}
+
+
+.nutrition-label small {
+
+    display: block;
+
+    color: #64748b;
+
+    font-size: 10px;
+
+    margin-top: 3px;
+}
+
+
+.nutrition-item > strong {
+
+    color: #2563eb;
+
+    font-size: 14px;
+
+    white-space: nowrap;
+}
+
+
+/* =====================================================
+   DAILY VALUES
+===================================================== */
+
+.daily-value {
+
+    background: #f8fafc;
+
+    border-radius: 15px;
+
+    padding: 18px;
+
+    margin-top: 20px;
+}
+
+
+.daily-value h3 {
+
+    font-size: 15px;
+
+    margin-bottom: 15px;
+}
+
+
+.dv-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 10px;
+}
+
+
+.dv-grid div {
+
+    background: white;
+
+    border:
+        1px solid #e2e8f0;
+
+    padding: 12px;
+
+    border-radius: 10px;
+
+    text-align: center;
+}
+
+
+.dv-grid span {
+
+    display: block;
+
+    font-size: 11px;
+
+    color: #64748b;
+
+    margin-bottom: 5px;
+}
+
+
+.dv-grid b {
+
+    color: #2563eb;
+
+    font-size: 14px;
+}
+
+
+.note {
+
+    font-size: 10px;
+
+    color: #64748b;
+
+    margin-top: 15px;
+}
+
+
+/* =====================================================
+   HISTORY
+===================================================== */
+
+.history-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 15px;
+}
+
+
+.search-box {
+
+    margin-bottom: 15px;
+}
+
+
+.table-container {
+
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 900px;
+}
+
+
+thead {
+
+    background: #0f172a;
+
+    color: white;
+}
+
+
+th {
+
+    padding: 13px;
+
+    text-align: left;
+
+    font-size: 12px;
+}
+
+
+td {
+
+    padding: 12px;
+
+    border-bottom:
+        1px solid #e2e8f0;
+
+    font-size: 12px;
+}
+
+
+tbody tr:hover {
+
+    background: #f8fafc;
+}
+
+
+.delete-btn {
+
+    background: #fee2e2;
+
+    color: #b91c1c;
+
+    padding: 7px 10px;
+
+    font-size: 11px;
+}
+
+
+.empty-history {
+
+    text-align: center;
+
+    padding: 30px;
+
+    color: #94a3b8;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer {
+
+    background: #0f172a;
+
+    color: #94a3b8;
+
+    text-align: center;
+
+    padding: 20px;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 850px) {
+
+    .header {
+
+        padding: 20px 5%;
+    }
+
+
+    .header h1 {
+
+        font-size: 24px;
+    }
+
+
+    .container {
+
+        width: 94%;
+    }
+
+
+    .nutrition-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .dv-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .header {
+
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+
+    .input-row {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .button-row {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .nutrition-main {
+
+        grid-template-columns: 1fr;
+    }
+
+immune
+    .info-grid {
+
+        grid-template-co qlumns: 1fr;
+    }
+
+
+    .history-header {
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+
+    .dv-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    #weightDisplay {
+
+        font-size: 42px;
+    }
+
+
+    .card {
+
+        padding: 18px;
+    }
+
+}

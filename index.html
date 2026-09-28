@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Weight Scale</title>
+
+    <link rel="stylesheet"
+        href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="logo">
+            ⚖️
+        </div>
+
+        <div>
+            <h1>Smart Weight Scale</h1>
+
+            <p>
+                Weight Measurement & Nutrition Tracker
+            </p>
+        </div>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="container">
+
+
+        <!-- ================= SCALE ================= -->
+
+        <section class="card scale-card">
+
+            <div class="section-title">
+
+                <span>⚖️</span>
+
+                <div>
+                    <h2>Weight Measurement</h2>
+
+                    <p>
+                        Enter an item and its measured weight
+                    </p>
+                </div>
+
+            </div>
+
+
+            <!-- SCALE DISPLAY -->
+
+            <div class="scale-display">
+
+                <span id="weightDisplay">
+                    0.0
+                </span>
+
+                <span id="displayUnit">
+                    g
+                </span>
+
+            </div>
+
+
+            <!-- ITEM -->
+
+            <div class="form-group">
+
+                <label for="itemInput">
+                    🔍 Item / Food
+                </label>
+
+                <input
+                    type="text"
+                    id="itemInput"
+                    placeholder="Example: Apple, Chicken, Rice..."
+                    autocomplete="off"
+                >
+
+                <div id="itemIdentification"
+                    class="identification">
+
+                    Enter an item to identify it.
+
+                </div>
+
+            </div>
+
+
+            <!-- WEIGHT -->
+
+            <div class="input-row">
+
+                <div class="form-group">
+
+                    <label for="weightInput">
+                        ⚖️ Weight
+                    </label>
+
+                    <input
+                        type="number"
+                        id="weightInput"
+                        placeholder="Enter weight"
+                        min="0"
+                        step="0.1"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="unitSelect">
+                        📏 Unit
+                    </label>
+
+                    <select id="unitSelect">
+
+                        <option value="g">
+                            Grams (g)
+                        </option>
+
+                        <option value="kg">
+                            Kilograms (kg)
+                        </option>
+
+                        <option value="lb">
+                            Pounds (lb)
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- BUTTONS -->
+
+            <div class="button-row">
+
+                <button
+                    id="recordBtn"
+                    class="primary-btn">
+
+                    ⚖️ Record Measurement
+
+                </button>
+
+
+                <button
+                    id="resetBtn"
+                    class="secondary-btn">
+
+                    ↻ Reset
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= ITEM INFO ================= -->
+
+        <section class="card item-card">
+
+            <div class="section-title">
+
+                <span>🔎</span>
+
+                <div>
+
+                    <h2>Item Identification</h2>
+
+                    <p>
+                        Detected item information
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="detected-item">
+
+                <div
+                    id="itemIcon"
+                    class="item-icon">
+
+                    📦
+
+                </div>
+
+
+                <div>
+
+                    <h3 id="itemName">
+                        No Item Detected
+                    </h3>
+
+                    <p id="itemCategory">
+                        Category: —
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="info-grid">
+
+                <div class="info-box">
+
+                    <span>
+                        Weight
+                    </span>
+
+                    <strong id="infoWeight">
+                        0 g
+                    </strong>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <span>
+                        Serving
+                    </span>
+
+                    <strong id="servingSize">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <span>
+                        Calories / 100g
+                    </span>
+
+                    <strong id="calories100">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <span>
+                        Food Type
+                    </span>
+
+                    <strong id="foodType">
+                        —
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= NUTRITION ================= -->
+
+        <section class="card nutrition-card">
+
+            <div class="section-title">
+
+                <span>🍎</span>
+
+                <div>
+
+                    <h2>Nutrition Facts</h2>
+
+                    <p id="nutritionSubtitle">
+                        Nutrition based on measured weight
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="nutrition-main">
+
+                <div class="calorie-box">
+
+                    <span>
+                        🔥 Calories
+                    </span>
+
+                    <strong id="calories">
+                        0
+                    </strong>
+
+                    <small>
+                        kcal
+                    </small>
+
+                </div>
+
+
+                <div class="protein-box">
+
+                    <span>
+                        💪 Protein
+                    </span>
+
+                    <strong id="protein">
+                        0
+                    </strong>
+
+                    <small>
+                        g
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <!-- NUTRITION GRID -->
+
+            <div class="nutrition-grid">
+
+
+                <!-- CARBS -->
+
+                <div class="nutrition-item">
+
+                    <div class="nutrition-label">
+
+                        <span>🍞</span>
+
+                        <div>
+                            <b>Carbohydrates</b>
+                            <small>Energy source</small>
+                        </div>
+
+                    </div>
+
+                    <strong id="carbs">
+                        0 g
+                    </strong>
+
+                </div>
+
+
+                <!-- FAT -->
+
+                <div class="nutrition-item">
+
+                    <div class="nutrition-label">
+
+                        <span>🥑</span>
+
+                        <div>
+                            <b>Total Fat</b>
+                            <small>Dietary fat</small>
+                        </div>
+
+                    </div>
+
+                    <strong id="fat">
+                        0 g
+                    </strong>
+
+                </div>
+
+
+                <!-- SATURATED FAT -->
+
+                <div class="nutrition-item">
+
+                    <div class="nutrition-label">
+
+                        <span>🧈</span>
+
+                        <div>
+                            <b>Saturated Fat</b>
+                            <small>Saturated fat</small>
+                        </div>
+
+                    </div>
+
+                    <strong id="saturatedFat">
+                        0 g
+                    </strong>
+
+                </div>
+
+
+                <!-- FIBER -->
+
+                <div class="nutrition-item">
+
+                    <div class="nutrition-label">
+
+                        <span>🌾</span>
+
+                        <div>
+                            <b>Fiber</b>
+                            <small>Dietary fiber</small>
+                        </div>
+
+                    </div>
+
+                    <strong id="fiber">
+                        0 g
+                    </strong>
+
+                </div>
+
+
+                <!-- SUGAR -->
+
+                <div class="nutrition-item">
+
+                    <div class="nutrition-label">
+
+                        <span>🍬</span>
+
+                        <div>
+                            <b>Sugar</b>
+                            <small>Total sugar</small>
+                        </div>
+
+                    </div>
+
+                    <strong id="sugar">
+                        0 g
+                    </strong>
+
+                </div>
+
+
+                <!-- SODIUM -->
+
+                <div class="nutrition-item">
+
+                    <div class="nutrition-label">
+
+                        <span>🧂</span>
+
+                        <div>
+                            <b>Sodium</b>
+                            <small>Mineral</small>
+                        </div>
+
+                    </div>
+
+                    <strong id="sodium">
+                        0 mg
+                    </strong>
+
+                </div>
+
+
+                <!-- CALCIUM -->
+
+                <div class="nutrition-item">
+
+                    <div class="nutrition-label">
+
+                        <span>🦴</span>
+
+                        <div>
+                            <b>Calcium</b>
+                            <small>Bone mineral</small>
+                        </div>
+
+                    </div>
+
+                    <strong id="calcium">
+                        0 mg
+                    </strong>
+
+                </div>
+
+
+                <!-- IRON -->
+
+                <div class="nutrition-item">
+
+                    <div class="nutrition-label">
+
+                        <span>🩸</span>
+
+                        <div>
+                            <b>Iron</b>
+                            <small>Essential mineral</small>
+                        </div>
+
+                    </div>
+
+                    <strong id="iron">
+                        0 mg
+                    </strong>
+
+                </div>
+
+
+                <!-- WATER -->
+
+                <div class="nutrition-item">
+
+                    <div class="nutrition-label">
+
+                        <span>💧</span>
+
+                        <div>
+                            <b>Water</b>
+                            <small>Estimated content</small>
+                        </div>
+
+                    </div>
+
+                    <strong id="water">
+                        0 g
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- DAILY VALUE -->
+
+            <div class="daily-value">
+
+                <h3>
+                    📊 Estimated Daily Values
+                </h3>
+
+                <div class="dv-grid">
+
+                    <div>
+                        <span>Calories</span>
+                        <b id="caloriesDV">0%</b>
+                    </div>
+
+                    <div>
+                        <span>Protein</span>
+                        <b id="proteinDV">0%</b>
+                    </div>
+
+                    <div>
+                        <span>Carbs</span>
+                        <b id="carbsDV">0%</b>
+                    </div>
+
+                    <div>
+                        <span>Fat</span>
+                        <b id="fatDV">0%</b>
+                    </div>
+
+                    <div>
+                        <span>Fiber</span>
+                        <b id="fiberDV">0%</b>
+                    </div>
+
+                    <div>
+                        <span>Sodium</span>
+                        <b id="sodiumDV">0%</b>
+                    </div>
+
+                </div>
+
+                <p class="note">
+
+                    * Daily values are general estimates
+                    based on a 2,000 kcal diet.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= HISTORY ================= -->
+
+        <section class="card history-card">
+
+            <div class="history-header">
+
+                <div class="section-title">
+
+                    <span>📜</span>
+
+                    <div>
+
+                        <h2>Measurement History</h2>
+
+                        <p>
+                            Track your previous measurements
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    id="clearHistoryBtn"
+                    class="danger-btn">
+
+                    🗑 Clear History
+
+                </button>
+
+            </div>
+
+
+            <!-- SEARCH -->
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="historySearch"
+                    placeholder="🔎 Search item history..."
+                >
+
+            </div>
+
+
+            <!-- TABLE -->
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Item</th>
+
+                            <th>Category</th>
+
+                            <th>Weight</th>
+
+                            <th>Calories</th>
+
+                            <th>Protein</th>
+
+                            <th>Carbs</th>
+
+                            <th>Fat</th>
+
+                            <th>Date</th>
+
+                            <th>Action</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="historyTable">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <div
+                id="emptyHistory"
+                class="empty-history">
+
+                📭 No measurements recorded yet.
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            Smart Weight Scale © 2026
+        </p>
+
+        <p>
+            HTML • CSS • JavaScript
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
