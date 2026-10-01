@@ -1,34 +1,13 @@
 /* =====================================================
-   SMART WEIGHT SCALE
-   JavaScript
-===================================================== */
-
-
-/* =====================================================
    FOOD DATABASE
-
-   Nutrition values are PER 100 GRAMS.
-
-   calories = kcal
-   protein = g
-   carbs = g
-   fat = g
-   saturatedFat = g
-   fiber = g
-   sugar = g
-   sodium = mg
-   calcium = mg
-   iron = mg
-   water = g
 ===================================================== */
 
 const foodDatabase = {
 
     apple: {
-
         icon: "🍎",
         category: "Fruit",
-
+        servingSize: "100 g",
         calories: 52,
         protein: 0.3,
         carbs: 13.8,
@@ -40,15 +19,12 @@ const foodDatabase = {
         calcium: 6,
         iron: 0.1,
         water: 85.6
-
     },
 
-
     banana: {
-
         icon: "🍌",
         category: "Fruit",
-
+        servingSize: "100 g",
         calories: 89,
         protein: 1.1,
         carbs: 22.8,
@@ -60,38 +36,32 @@ const foodDatabase = {
         calcium: 5,
         iron: 0.3,
         water: 74.9
-
     },
 
-
     orange: {
-
         icon: "🍊",
         category: "Fruit",
-
+        servingSize: "100 g",
         calories: 47,
         protein: 0.9,
         carbs: 11.8,
         fat: 0.1,
-        saturatedFat: 0,
+        saturatedFat: 0.0,
         fiber: 2.4,
         sugar: 9.4,
         sodium: 0,
         calcium: 40,
         iron: 0.1,
         water: 86.8
-
     },
 
-
     mango: {
-
         icon: "🥭",
         category: "Fruit",
-
+        servingSize: "100 g",
         calories: 60,
         protein: 0.8,
-        carbs: 15,
+        carbs: 15.0,
         fat: 0.4,
         saturatedFat: 0.1,
         fiber: 1.6,
@@ -100,15 +70,12 @@ const foodDatabase = {
         calcium: 11,
         iron: 0.2,
         water: 83.5
-
     },
 
-
     rice: {
-
         icon: "🍚",
         category: "Grain",
-
+        servingSize: "100 g",
         calories: 130,
         protein: 2.7,
         carbs: 28.2,
@@ -120,38 +87,32 @@ const foodDatabase = {
         calcium: 10,
         iron: 0.2,
         water: 68.4
-
     },
-
 
     egg: {
-
         icon: "🥚",
         category: "Protein",
-
-        calories: 143,
-        protein: 12.6,
-        carbs: 0.7,
-        fat: 9.5,
-        saturatedFat: 3.1,
+        servingSize: "100 g",
+        calories: 155,
+        protein: 13.0,
+        carbs: 1.1,
+        fat: 11.0,
+        saturatedFat: 3.3,
         fiber: 0,
-        sugar: 0.4,
-        sodium: 142,
-        calcium: 56,
-        iron: 1.8,
+        sugar: 1.1,
+        sodium: 124,
+        calcium: 50,
+        iron: 1.2,
         water: 76.2
-
     },
 
-
     bread: {
-
         icon: "🍞",
         category: "Grain",
-
-        calories: 266,
-        protein: 8.9,
-        carbs: 49.4,
+        servingSize: "100 g",
+        calories: 265,
+        protein: 9.0,
+        carbs: 49.0,
         fat: 3.2,
         saturatedFat: 0.7,
         fiber: 2.7,
@@ -159,98 +120,83 @@ const foodDatabase = {
         sodium: 491,
         calcium: 144,
         iron: 3.6,
-        water: 35
-
+        water: 35.0
     },
-
 
     chicken: {
-
         icon: "🍗",
         category: "Meat",
-
-        calories: 165,
-        protein: 31,
+        servingSize: "100 g",
+        calories: 239,
+        protein: 27.3,
         carbs: 0,
-        fat: 3.6,
-        saturatedFat: 1.0,
+        fat: 13.6,
+        saturatedFat: 3.8,
         fiber: 0,
         sugar: 0,
-        sodium: 74,
+        sodium: 82,
         calcium: 15,
-        iron: 1.0,
+        iron: 1.3,
         water: 65.3
-
     },
 
-
     beef: {
-
         icon: "🥩",
         category: "Meat",
-
+        servingSize: "100 g",
         calories: 250,
-        protein: 26,
+        protein: 26.0,
         carbs: 0,
-        fat: 15,
-        saturatedFat: 6,
+        fat: 15.0,
+        saturatedFat: 6.0,
         fiber: 0,
         sugar: 0,
         sodium: 72,
         calcium: 18,
         iron: 2.6,
-        water: 57.5
-
+        water: 61.9
     },
 
-
     pork: {
-
         icon: "🥩",
         category: "Meat",
-
+        servingSize: "100 g",
         calories: 242,
-        protein: 27,
+        protein: 27.3,
         carbs: 0,
-        fat: 14,
-        saturatedFat: 5,
+        fat: 14.0,
+        saturatedFat: 5.0,
         fiber: 0,
         sugar: 0,
         sodium: 62,
         calcium: 19,
         iron: 0.9,
-        water: 61
-
+        water: 61.1
     },
-
 
     fish: {
-
         icon: "🐟",
         category: "Seafood",
-
-        calories: 136,
-        protein: 20,
+        servingSize: "100 g",
+        calories: 206,
+        protein: 22.0,
         carbs: 0,
-        fat: 6,
-        saturatedFat: 1.5,
+        fat: 12.4,
+        saturatedFat: 2.0,
         fiber: 0,
         sugar: 0,
-        sodium: 60,
-        calcium: 20,
-        iron: 0.5,
-        water: 72
-
+        sodium: 59,
+        calcium: 15,
+        iron: 0.3,
+        water: 64.4
     },
 
-
     tuna: {
-
         icon: "🐟",
         category: "Seafood",
-
+        servingSize: "100 g",
         calories: 132,
-        protein: 28,
+        protein: 28.0,
         carbs: 0,
         fat: 1.3,
         saturatedFat: 0.4,
@@ -259,184 +205,141 @@ const foodDatabase = {
         sodium: 47,
         calcium: 10,
         iron: 1.0,
-        water: 68
-
+        water: 68.0
     },
 
-
     potato: {
-
         icon: "🥔",
         category: "Vegetable",
-
+        servingSize: "100 g",
         calories: 77,
-        protein: 2,
+        protein: 2.0,
         carbs: 17.5,
         fat: 0.1,
-        saturatedFat: 0,
+        saturatedFat: 0.0,
         fiber: 2.2,
         sugar: 0.8,
         sodium: 6,
         calcium: 12,
         iron: 0.8,
-        water: 79.2
-
+        water: 79.3
     },
 
-
     tomato: {
-
         icon: "🍅",
         category: "Vegetable",
-
+        servingSize: "100 g",
         calories: 18,
         protein: 0.9,
         carbs: 3.9,
         fat: 0.2,
-        saturatedFat: 0,
+        saturatedFat: 0.0,
         fiber: 1.2,
         sugar: 2.6,
         sodium: 5,
         calcium: 10,
         iron: 0.3,
-        water: 95
-
+        water: 95.0
     },
 
-
     carrot: {
-
         icon: "🥕",
         category: "Vegetable",
-
+        servingSize: "100 g",
         calories: 41,
         protein: 0.9,
         carbs: 9.6,
         fat: 0.2,
-        saturatedFat: 0,
+        saturatedFat: 0.0,
         fiber: 2.8,
         sugar: 4.7,
         sodium: 69,
         calcium: 33,
         iron: 0.3,
-        water: 88
-
+        water: 88.3
     }
-
 };
 
 
 /* =====================================================
-   NON-FOOD ITEMS
+   NON-FOOD DATABASE
 ===================================================== */
 
 const itemDatabase = {
 
     phone: {
-
         icon: "📱",
-        category: "Electronics"
-
+        category: "Electronic Device"
     },
 
     smartphone: {
-
         icon: "📱",
-        category: "Electronics"
-
+        category: "Electronic Device"
     },
 
     laptop: {
-
         icon: "💻",
-        category: "Electronics"
-
+        category: "Electronic Device"
     },
 
     tablet: {
-
         icon: "📱",
-        category: "Electronics"
-
+        category: "Electronic Device"
     },
 
     book: {
-
         icon: "📚",
-        category: "School Supplies"
-
+        category: "School Supply"
     },
 
     notebook: {
-
         icon: "📓",
-        category: "School Supplies"
-
+        category: "School Supply"
     },
 
     pencil: {
-
         icon: "✏️",
-        category: "School Supplies"
-
+        category: "School Supply"
     },
 
     pen: {
-
         icon: "🖊️",
-        category: "School Supplies"
-
+        category: "School Supply"
     },
 
     bottle: {
-
-        icon: "🥤",
+        icon: "🍼",
         category: "Container"
-
     },
 
     water: {
-
         icon: "💧",
-        category: "Drink"
-
+        category: "Liquid"
     },
 
     bag: {
-
-        icon: "🎒",
-        category: "Household"
-
+        icon: "👜",
+        category: "Personal Item"
     },
 
     box: {
-
         icon: "📦",
-        category: "Household"
-
+        category: "Container"
     }
-
 };
 
 
 /* =====================================================
    DAILY VALUES
-
-   General reference values.
 ===================================================== */
 
 const dailyValues = {
 
     calories: 2000,
-
     protein: 50,
-
     carbs: 275,
-
     fat: 78,
-
     fiber: 28,
-
     sodium: 2300
 
 };
@@ -446,203 +349,158 @@ const dailyValues = {
    ELEMENTS
 ===================================================== */
 
-const itemInput =
-    document.getElementById("itemInput");
+const itemInput = document.getElementById("itemInput");
 
-const weightInput =
-    document.getElementById("weightInput");
+const weightInput = document.getElementById("weightInput");
 
-const unitSelect =
-    document.getElementById("unitSelect");
+const unitSelect = document.getElementById("unitSelect");
 
-const weightDisplay =
-    document.getElementById("weightDisplay");
+const weightDisplay = document.getElementById("weightDisplay");
 
-const displayUnit =
-    document.getElementById("displayUnit");
+const displayUnit = document.getElementById("displayUnit");
 
 const itemIdentification =
-    document.getElementById(
-        "itemIdentification"
-    );
+    document.getElementById("itemIdentification");
+
+
+const itemIcon =
+    document.getElementById("itemIcon");
+
+const itemName =
+    document.getElementById("itemName");
+
+const itemCategory =
+    document.getElementById("itemCategory");
+
+const infoWeight =
+    document.getElementById("infoWeight");
+
+const servingSize =
+    document.getElementById("servingSize");
+
+const calories100 =
+    document.getElementById("calories100");
+
+const foodType =
+    document.getElementById("foodType");
+
+
+const recordBtn =
+    document.getElementById("recordBtn");
+
+const resetBtn =
+    document.getElementById("resetBtn");
+
+const clearHistoryBtn =
+    document.getElementById("clearHistoryBtn");
+
+const historySearch =
+    document.getElementById("historySearch");
+
+const historyTableBody =
+    document.getElementById("historyTableBody");
 
 
 /* =====================================================
-   FIND ITEM
+   HELPER FUNCTIONS
 ===================================================== */
 
 function findItem(name) {
 
-    name = name
-        .toLowerCase()
-        .trim();
+    const key = name
+        .trim()
+        .toLowerCase();
 
-
-    if (foodDatabase[name]) {
-
-        return foodDatabase[name];
-
-    }
-
-
-    if (itemDatabase[name]) {
-
-        return itemDatabase[name];
-
-    }
-
-
-    /* Search partial names */
-
-    for (let food in foodDatabase) {
-
-        if (name.includes(food)) {
-
-            return foodDatabase[food];
-
-        }
-
-    }
-
-
-    for (let item in itemDatabase) {
-
-        if (name.includes(item)) {
-
-            return itemDatabase[item];
-
-        }
-
-    }
-
-
-    return {
-
-        icon: "📦",
-
-        category: "Other"
-
-    };
-
+    return itemDatabase[key] || null;
 }
 
-
-/* =====================================================
-   FIND FOOD
-===================================================== */
 
 function findFood(name) {
 
-    name = name
-        .toLowerCase()
-        .trim();
+    const key = name
+        .trim()
+        .toLowerCase();
 
-
-    if (foodDatabase[name]) {
-
-        return foodDatabase[name];
-
-    }
-
-
-    for (let food in foodDatabase) {
-
-        if (name.includes(food)) {
-
-            return foodDatabase[food];
-
-        }
-
-    }
-
-
-    return null;
-
+    return foodDatabase[key] || null;
 }
 
 
-/* =====================================================
-   CONVERT WEIGHT TO GRAMS
-===================================================== */
+function convertToGrams(weight, unit) {
 
-function convertToGrams(
-    weight,
-    unit
-) {
+    if (!Number.isFinite(weight)) {
+        return 0;
+    }
 
     if (unit === "kg") {
-
         return weight * 1000;
-
     }
-
 
     if (unit === "lb") {
-
         return weight * 453.592;
-
     }
-
 
     return weight;
-
 }
 
 
-/* =====================================================
-   FORMAT NUMBER
-===================================================== */
+function formatNumber(value, decimals = 2) {
 
-function formatNumber(
-    number,
-    decimals = 1
-) {
-
-    if (!Number.isFinite(number)) {
-
+    if (!Number.isFinite(value)) {
         return "0";
-
     }
 
+    return Number(value.toFixed(decimals))
+        .toLocaleString();
+}
 
-    return number.toFixed(
-        decimals
-    );
 
+function animateElement(element, className) {
+
+    if (!element) {
+        return;
+    }
+
+    element.classList.remove(className);
+
+    void element.offsetWidth;
+
+    element.classList.add(className);
+
+    setTimeout(() => {
+        element.classList.remove(className);
+    }, 600);
 }
 
 
 /* =====================================================
-   UPDATE SCALE
+   UPDATE WEIGHT DISPLAY
 ===================================================== */
 
 function updateScale() {
 
-    const weight =
-        parseFloat(
-            weightInput.value
-        ) || 0;
-
+    let weight =
+        parseFloat(weightInput.value);
 
     const unit =
         unitSelect.value;
 
 
+    if (!Number.isFinite(weight) || weight < 0) {
+        weight = 0;
+    }
+
+
     weightDisplay.textContent =
-        formatNumber(
-            weight,
-            1
-        );
+        formatNumber(weight, 2);
 
 
-    displayUnit.textContent =
-        unit;
+    displayUnit.textContent = unit;
 
 
-    document.getElementById(
-        "infoWeight"
-    ).textContent =
-        `${formatNumber(weight, 1)} ${unit}`;
+    animateElement(
+        weightDisplay,
+        "weight-changed"
+    );
 
 
     updateItemIdentification();
@@ -653,146 +511,144 @@ function updateScale() {
 
 
 /* =====================================================
-   UPDATE ITEM IDENTIFICATION
+   ITEM IDENTIFICATION
 ===================================================== */
 
 function updateItemIdentification() {
 
     const name =
-        itemInput.value
-            .trim();
+        itemInput.value.trim();
+
+
+    const weight =
+        parseFloat(weightInput.value);
+
+
+    const unit =
+        unitSelect.value;
+
+
+    const grams =
+        convertToGrams(
+            weight,
+            unit
+        );
 
 
     if (!name) {
 
-        itemIdentification.textContent =
-            "Enter an item to identify it.";
+        itemIcon.textContent = "❓";
 
+        itemName.textContent =
+            "No item detected";
 
-        document.getElementById(
-            "itemIcon"
-        ).textContent =
-            "📦";
+        itemCategory.textContent = "—";
 
+        infoWeight.textContent = "—";
 
-        document.getElementById(
-            "itemName"
-        ).textContent =
-            "No Item Detected";
+        servingSize.textContent = "—";
 
+        calories100.textContent = "—";
 
-        document.getElementById(
-            "itemCategory"
-        ).textContent =
-            "Category: —";
-
-
-        document.getElementById(
-            "servingSize"
-        ).textContent =
-            "—";
-
-
-        document.getElementById(
-            "calories100"
-        ).textContent =
-            "—";
-
-
-        document.getElementById(
-            "foodType"
-        ).textContent =
-            "—";
-
+        foodType.textContent = "—";
 
         return;
-
     }
-
-
-    const item =
-        findItem(name);
 
 
     const food =
         findFood(name);
 
 
-    itemIdentification.textContent =
-        `${item.icon} ${name} identified as ${item.category}.`;
-
-
-    document.getElementById(
-        "itemIcon"
-    ).textContent =
-        item.icon;
-
-
-    document.getElementById(
-        "itemName"
-    ).textContent =
-        name;
-
-
-    document.getElementById(
-        "itemCategory"
-    ).textContent =
-        `Category: ${item.category}`;
+    const item =
+        findItem(name);
 
 
     if (food) {
 
-        document.getElementById(
-            "servingSize"
-        ).textContent =
-            "Per 100 g";
+        itemIcon.textContent =
+            food.icon;
 
+        itemName.textContent =
+            capitalize(name);
 
-        document.getElementById(
-            "calories100"
-        ).textContent =
+        itemCategory.textContent =
+            food.category;
+
+        infoWeight.textContent =
+            `${formatNumber(grams)} g`;
+
+        servingSize.textContent =
+            food.servingSize;
+
+        calories100.textContent =
             `${food.calories} kcal`;
 
-
-        document.getElementById(
-            "foodType"
-        ).textContent =
+        foodType.textContent =
             "Food";
+
+    } else if (item) {
+
+        itemIcon.textContent =
+            item.icon;
+
+        itemName.textContent =
+            capitalize(name);
+
+        itemCategory.textContent =
+            item.category;
+
+        infoWeight.textContent =
+            `${formatNumber(grams)} g`;
+
+        servingSize.textContent =
+            "N/A";
+
+        calories100.textContent =
+            "N/A";
+
+        foodType.textContent =
+            "Non-food";
 
     } else {
 
-        document.getElementById(
-            "servingSize"
-        ).textContent =
+        itemIcon.textContent = "❓";
+
+        itemName.textContent =
+            capitalize(name);
+
+        itemCategory.textContent =
+            "Unknown";
+
+        infoWeight.textContent =
+            `${formatNumber(grams)} g`;
+
+        servingSize.textContent =
             "N/A";
 
-
-        document.getElementById(
-            "calories100"
-        ).textContent =
+        calories100.textContent =
             "N/A";
 
-
-        document.getElementById(
-            "foodType"
-        ).textContent =
-            "Non-food";
-
+        foodType.textContent =
+            "Unknown";
     }
 
+
+    animateElement(
+        itemIdentification,
+        "item-updated"
+    );
 }
 
 
 /* =====================================================
-   UPDATE NUTRITION
+   NUTRITION
 ===================================================== */
 
 function updateNutrition() {
 
     const name =
-        itemInput.value
-            .toLowerCase()
-            .trim();
+        itemInput.value.trim();
 
 
     const food =
@@ -800,9 +656,7 @@ function updateNutrition() {
 
 
     const weight =
-        parseFloat(
-            weightInput.value
-        ) || 0;
+        parseFloat(weightInput.value);
 
 
     const unit =
@@ -824,209 +678,135 @@ function updateNutrition() {
         resetNutrition();
 
         return;
-
     }
 
-
-    /*
-
-       Food database values are per 100 g.
-
-       Example:
-
-       200 g = 2 × nutrition values
-
-    */
 
     const multiplier =
         grams / 100;
 
 
-    const calories =
-        food.calories *
-        multiplier;
+    const nutritionFields = [
 
-
-    const protein =
-        food.protein *
-        multiplier;
-
-
-    const carbs =
-        food.carbs *
-        multiplier;
-
-
-    const fat =
-        food.fat *
-        multiplier;
-
-
-    const saturatedFat =
-        food.saturatedFat *
-        multiplier;
-
-
-    const fiber =
-        food.fiber *
-        multiplier;
-
-
-    const sugar =
-        food.sugar *
-        multiplier;
-
-
-    const sodium =
-        food.sodium *
-        multiplier;
-
-
-    const calcium =
-        food.calcium *
-        multiplier;
-
-
-    const iron =
-        food.iron *
-        multiplier;
-
-
-    const water =
-        food.water *
-        multiplier;
-
-
-    /* Main nutrition */
-
-    document.getElementById(
-        "calories"
-    ).textContent =
-        formatNumber(
-            calories,
-            0
-        );
-
-
-    document.getElementById(
-        "protein"
-    ).textContent =
-        formatNumber(
-            protein,
-            1
-        );
-
-
-    /* Other nutrition */
-
-    document.getElementById(
-        "carbs"
-    ).textContent =
-        `${formatNumber(carbs)} g`;
-
-
-    document.getElementById(
-        "fat"
-    ).textContent =
-        `${formatNumber(fat)} g`;
-
-
-    document.getElementById(
-        "saturatedFat"
-    ).textContent =
-        `${formatNumber(saturatedFat)} g`;
-
-
-    document.getElementById(
-        "fiber"
-    ).textContent =
-        `${formatNumber(fiber)} g`;
-
-
-    document.getElementById(
-        "sugar"
-    ).textContent =
-        `${formatNumber(sugar)} g`;
-
-
-    document.getElementById(
-        "sodium"
-    ).textContent =
-        `${formatNumber(sodium, 0)} mg`;
-
-
-    document.getElementById(
-        "calcium"
-    ).textContent =
-        `${formatNumber(calcium, 0)} mg`;
-
-
-    document.getElementById(
-        "iron"
-    ).textContent =
-        `${formatNumber(iron)} mg`;
-
-
-    document.getElementById(
+        "calories",
+        "protein",
+        "carbs",
+        "fat",
+        "saturatedFat",
+        "fiber",
+        "sugar",
+        "sodium",
+        "calcium",
+        "iron",
         "water"
-    ).textContent =
-        `${formatNumber(water)} g`;
+
+    ];
 
 
-    /* Daily values */
+    nutritionFields.forEach(field => {
 
-    document.getElementById(
-        "caloriesDV"
-    ).textContent =
-        `${formatNumber(
-            calories / dailyValues.calories * 100,
-            1
-        )}%`;
+        const element =
+            document.getElementById(field);
 
 
-    document.getElementById(
-        "proteinDV"
-    ).textContent =
-        `${formatNumber(
-            protein / dailyValues.protein * 100,
-            1
-        )}%`;
+        if (!element) {
+            return;
+        }
 
 
-    document.getElementById(
-        "carbsDV"
-    ).textContent =
-        `${formatNumber(
-            carbs / dailyValues.carbs * 100,
-            1
-        )}%`;
+        let value =
+            food[field] * multiplier;
 
 
-    document.getElementById(
-        "fatDV"
-    ).textContent =
-        `${formatNumber(
-            fat / dailyValues.fat * 100,
-            1
-        )}%`;
+        let suffix =
+            " g";
 
 
-    document.getElementById(
-        "fiberDV"
-    ).textContent =
-        `${formatNumber(
-            fiber / dailyValues.fiber * 100,
-            1
-        )}%`;
+        if (field === "calories") {
+            suffix = " kcal";
+        }
 
 
-    document.getElementById(
-        "sodiumDV"
-    ).textContent =
-        `${formatNumber(
-            sodium / dailyValues.sodium * 100,
-            1
-        )}%`;
+        if (
+            field === "sodium" ||
+            field === "calcium" ||
+            field === "iron"
+        ) {
+            suffix = " mg";
+        }
+
+
+        element.textContent =
+            `${formatNumber(value)}${suffix}`;
+
+
+        animateElement(
+            element.parentElement,
+            "nutrition-updated"
+        );
+
+    });
+
+
+    updateDailyValues(food, multiplier);
+
+}
+
+
+/* =====================================================
+   DAILY VALUE CALCULATIONS
+===================================================== */
+
+function updateDailyValues(
+    food,
+    multiplier
+) {
+
+    const values = {
+
+        calories:
+            (food.calories * multiplier)
+            / dailyValues.calories * 100,
+
+        protein:
+            (food.protein * multiplier)
+            / dailyValues.protein * 100,
+
+        carbs:
+            (food.carbs * multiplier)
+            / dailyValues.carbs * 100,
+
+        fat:
+            (food.fat * multiplier)
+            / dailyValues.fat * 100,
+
+        fiber:
+            (food.fiber * multiplier)
+            / dailyValues.fiber * 100,
+
+        sodium:
+            (food.sodium * multiplier)
+            / dailyValues.sodium * 100
+
+    };
+
+
+    Object.keys(values).forEach(key => {
+
+        const element =
+            document.getElementById(
+                `${key}DV`
+            );
+
+
+        if (!element) {
+            return;
+        }
+
+
+        element.textContent =
+            `${formatNumber(values[key], 1)}%`;
+
+    });
 
 }
 
@@ -1037,106 +817,80 @@ function updateNutrition() {
 
 function resetNutrition() {
 
-    document.getElementById(
-        "calories"
-    ).textContent =
-        "0";
+    const fields = [
 
-
-    document.getElementById(
-        "protein"
-    ).textContent =
-        "0";
-
-
-    document.getElementById(
-        "carbs"
-    ).textContent =
-        "0 g";
-
-
-    document.getElementById(
-        "fat"
-    ).textContent =
-        "0 g";
-
-
-    document.getElementById(
-        "saturatedFat"
-    ).textContent =
-        "0 g";
-
-
-    document.getElementById(
-        "fiber"
-    ).textContent =
-        "0 g";
-
-
-    document.getElementById(
-        "sugar"
-    ).textContent =
-        "0 g";
-
-
-    document.getElementById(
-        "sodium"
-    ).textContent =
-        "0 mg";
-
-
-    document.getElementById(
-        "calcium"
-    ).textContent =
-        "0 mg";
-
-
-    document.getElementById(
-        "iron"
-    ).textContent =
-        "0 mg";
-
-
-    document.getElementById(
+        "calories",
+        "protein",
+        "carbs",
+        "fat",
+        "saturatedFat",
+        "fiber",
+        "sugar",
+        "sodium",
+        "calcium",
+        "iron",
         "water"
-    ).textContent =
-        "0 g";
+
+    ];
 
 
-    document.getElementById(
-        "caloriesDV"
-    ).textContent =
-        "0%";
+    fields.forEach(field => {
+
+        const element =
+            document.getElementById(field);
 
 
-    document.getElementById(
-        "proteinDV"
-    ).textContent =
-        "0%";
+        if (!element) {
+            return;
+        }
 
 
-    document.getElementById(
-        "carbsDV"
-    ).textContent =
-        "0%";
+        let suffix = " g";
 
 
-    document.getElementById(
-        "fatDV"
-    ).textContent =
-        "0%";
+        if (field === "calories") {
+            suffix = " kcal";
+        }
 
 
-    document.getElementById(
-        "fiberDV"
-    ).textContent =
-        "0%";
+        if (
+            field === "sodium" ||
+            field === "calcium" ||
+            field === "iron"
+        ) {
+            suffix = " mg";
+        }
 
 
-    document.getElementById(
+        element.textContent =
+            `0${suffix}`;
+
+    });
+
+
+    const dailyFields = [
+
+        "caloriesDV",
+        "proteinDV",
+        "carbsDV",
+        "fatDV",
+        "fiberDV",
         "sodiumDV"
-    ).textContent =
-        "0%";
+
+    ];
+
+
+    dailyFields.forEach(id => {
+
+        const element =
+            document.getElementById(id);
+
+
+        if (element) {
+            element.textContent = "0%";
+        }
+
+    });
 
 }
 
@@ -1148,8 +902,7 @@ function resetNutrition() {
 function getCurrentNutrition() {
 
     const name =
-        itemInput.value
-            .trim();
+        itemInput.value.trim();
 
 
     const food =
@@ -1157,9 +910,7 @@ function getCurrentNutrition() {
 
 
     const weight =
-        parseFloat(
-            weightInput.value
-        ) || 0;
+        parseFloat(weightInput.value);
 
 
     const unit =
@@ -1173,24 +924,8 @@ function getCurrentNutrition() {
         );
 
 
-    if (!food) {
-
-        return {
-
-            calories: 0,
-            protein: 0,
-            carbs: 0,
-            fat: 0,
-            saturatedFat: 0,
-            fiber: 0,
-            sugar: 0,
-            sodium: 0,
-            calcium: 0,
-            iron: 0,
-            water: 0
-
-        };
-
+    if (!food || grams <= 0) {
+        return null;
     }
 
 
@@ -1201,64 +936,20 @@ function getCurrentNutrition() {
     return {
 
         calories:
-            food.calories *
-            multiplier,
+            food.calories * multiplier,
 
         protein:
-            food.protein *
-            multiplier,
+            food.protein * multiplier,
 
         carbs:
-            food.carbs *
-            multiplier,
+            food.carbs * multiplier,
 
         fat:
-            food.fat *
-            multiplier,
-
-        saturatedFat:
-            food.saturatedFat *
-            multiplier,
-
-        fiber:
-            food.fiber *
-            multiplier,
-
-        sugar:
-            food.sugar *
-            multiplier,
-
-        sodium:
-            food.sodium *
-            multiplier,
-
-        calcium:
-            food.calcium *
-            multiplier,
-
-        iron:
-            food.iron *
-            multiplier,
-
-        water:
-            food.water *
-            multiplier
+            food.fat * multiplier
 
     };
 
 }
-
-
-/* =====================================================
-   HISTORY
-===================================================== */
-
-let history =
-    JSON.parse(
-        localStorage.getItem(
-            "weightScaleHistory"
-        )
-    ) || [];
 
 
 /* =====================================================
@@ -1267,34 +958,32 @@ let history =
 
 function recordMeasurement() {
 
-    const itemName =
-        itemInput.value
-            .trim();
+    const name =
+        itemInput.value.trim();
 
 
     const weight =
-        parseFloat(
-            weightInput.value
-        );
+        parseFloat(weightInput.value);
 
 
     const unit =
         unitSelect.value;
 
 
-    if (!itemName) {
+    if (!name) {
 
         alert(
             "Please enter an item name."
         );
 
-        return;
+        itemInput.focus();
 
+        return;
     }
 
 
     if (
-        isNaN(weight) ||
+        !Number.isFinite(weight) ||
         weight <= 0
     ) {
 
@@ -1302,13 +991,25 @@ function recordMeasurement() {
             "Please enter a valid weight."
         );
 
-        return;
+        weightInput.focus();
 
+        return;
     }
 
 
+    const grams =
+        convertToGrams(
+            weight,
+            unit
+        );
+
+
+    const food =
+        findFood(name);
+
+
     const item =
-        findItem(itemName);
+        findItem(name);
 
 
     const nutrition =
@@ -1317,100 +1018,50 @@ function recordMeasurement() {
 
     const record = {
 
-        id:
-            Date.now(),
+        id: Date.now(),
 
-        item:
-            itemName,
+        item: capitalize(name),
 
-        icon:
-            item.icon,
-
-        category:
-            item.category,
-
-        weight:
-            weight,
-
-        unit:
-            unit,
+        weight: grams,
 
         calories:
-            nutrition.calories,
+            nutrition
+                ? nutrition.calories
+                : 0,
 
-        protein:
-            nutrition.protein,
-
-        carbs:
-            nutrition.carbs,
-
-        fat:
-            nutrition.fat,
-
-        saturatedFat:
-            nutrition.saturatedFat,
-
-        fiber:
-            nutrition.fiber,
-
-        sugar:
-            nutrition.sugar,
-
-        sodium:
-            nutrition.sodium,
-
-        calcium:
-            nutrition.calcium,
-
-        iron:
-            nutrition.iron,
-
-        water:
-            nutrition.water,
-
-        date:
-            new Date().toLocaleString()
+        category:
+            food
+                ? food.category
+                : item
+                    ? item.category
+                    : "Unknown"
 
     };
 
 
-    history.unshift(
-        record
-    );
+    let history =
+        JSON.parse(
+            localStorage.getItem(
+                "weightScaleHistory"
+            )
+        ) || [];
 
 
-    saveHistory();
+    history.unshift(record);
 
-    renderHistory();
-
-
-    alert(
-        `${item.icon} ${itemName} recorded successfully!\n\n` +
-
-        `Weight: ${weight} ${unit}\n` +
-
-        `Calories: ${formatNumber(
-            nutrition.calories,
-            0
-        )} kcal\n` +
-
-        `Protein: ${formatNumber(
-            nutrition.protein
-        )} g`
-    );
-
-}
-
-
-/* =====================================================
-   SAVE HISTORY
-===================================================== */
-
-function saveHistory() {
 
     localStorage.setItem(
         "weightScaleHistory",
         JSON.stringify(history)
+    );
+
+
+    renderHistory();
+
+
+    animateElement(
+        recordBtn,
+        "button-recorded"
     );
 
 }
@@ -1421,117 +1072,105 @@ function saveHistory() {
 ===================================================== */
 
 function renderHistory(
-    filteredHistory = history
+    searchTerm = ""
 ) {
 
-    const table =
-        document.getElementById(
-            "historyTable"
+    const history =
+        JSON.parse(
+            localStorage.getItem(
+                "weightScaleHistory"
+            )
+        ) || [];
+
+
+    const search =
+        searchTerm
+            .trim()
+            .toLowerCase();
+
+
+    const filtered =
+        history.filter(record =>
+
+            record.item
+                .toLowerCase()
+                .includes(search)
+
         );
 
 
-    const empty =
-        document.getElementById(
-            "emptyHistory"
-        );
+    historyTableBody.innerHTML = "";
 
 
-    table.innerHTML = "";
+    if (filtered.length === 0) {
+
+        const row =
+            document.createElement("tr");
 
 
-    if (
-        filteredHistory.length === 0
-    ) {
+        row.innerHTML = `
+            <td colspan="5" class="empty-history">
+                No measurement history found.
+            </td>
+        `;
 
-        empty.style.display =
-            "block";
+
+        historyTableBody.appendChild(row);
 
         return;
-
     }
 
 
-    empty.style.display =
-        "none";
+    filtered.forEach((record, index) => {
+
+        const row =
+            document.createElement("tr");
 
 
-    filteredHistory.forEach(
-        record => {
-
-            const row =
-                document.createElement(
-                    "tr"
-                );
+        row.classList.add(
+            "history-row"
+        );
 
 
-            row.innerHTML = `
-
-                <td>
-                    ${record.icon}
-                    ${record.item}
-                </td>
-
-                <td>
-                    ${record.category}
-                </td>
-
-                <td>
-                    ${formatNumber(
-                        record.weight
-                    )}
-                    ${record.unit}
-                </td>
-
-                <td>
-                    ${formatNumber(
-                        record.calories,
-                        0
-                    )} kcal
-                </td>
-
-                <td>
-                    ${formatNumber(
-                        record.protein
-                    )} g
-                </td>
-
-                <td>
-                    ${formatNumber(
-                        record.carbs
-                    )} g
-                </td>
-
-                <td>
-                    ${formatNumber(
-                        record.fat
-                    )} g
-                </td>
-
-                <td>
-                    ${record.date}
-                </td>
-
-                <td>
-
-                    <button
-                        class="delete-btn"
-                        onclick="deleteHistory(${record.id})">
-
-                        Delete
-
-                    </button>
-
-                </td>
-
-            `;
+        row.style.animationDelay =
+            `${index * 0.05}s`;
 
 
-            table.appendChild(
-                row
-            );
+        row.innerHTML = `
 
-        }
-    );
+            <td>
+                ${escapeHTML(record.item)}
+            </td>
+
+            <td>
+                ${formatNumber(record.weight)} g
+            </td>
+
+            <td>
+                ${formatNumber(record.calories)} kcal
+            </td>
+
+            <td>
+                ${escapeHTML(record.category)}
+            </td>
+
+            <td>
+
+                <button
+                    type="button"
+                    class="delete-btn"
+                    data-id="${record.id}"
+                >
+                    Delete
+                </button>
+
+            </td>
+        `;
+
+
+        historyTableBody.appendChild(row);
+
+    });
 
 }
 
@@ -1540,21 +1179,14 @@ function renderHistory(
    DELETE HISTORY
 ===================================================== */
 
-function deleteHistory(
-    id
-) {
+function deleteHistory(id) {
 
-    const confirmDelete =
-        confirm(
-            "Delete this measurement?"
-        );
-
-
-    if (!confirmDelete) {
-
-        return;
-
-    }
+    let history =
+        JSON.parse(
+            localStorage.getItem(
+                "weightScaleHistory"
+            )
+        ) || [];
 
 
     history =
@@ -1564,9 +1196,15 @@ function deleteHistory(
         );
 
 
-    saveHistory();
+    localStorage.setItem(
+        "weightScaleHistory",
+        JSON.stringify(history)
+    );
 
-    renderHistory();
+
+    renderHistory(
+        historySearch.value
+    );
 
 }
 
@@ -1577,84 +1215,41 @@ function deleteHistory(
 
 function clearHistory() {
 
-    if (
-        history.length === 0
-    ) {
+    const history =
+        JSON.parse(
+            localStorage.getItem(
+                "weightScaleHistory"
+            )
+        ) || [];
 
-        alert(
-            "There is no history to clear."
-        );
 
+    if (history.length === 0) {
         return;
-
     }
 
 
     const confirmClear =
         confirm(
-            "Are you sure you want to delete all measurement history?"
+            "Are you sure you want to clear all measurement history?"
         );
 
 
     if (!confirmClear) {
-
         return;
-
     }
 
 
-    history = [];
+    localStorage.removeItem(
+        "weightScaleHistory"
+    );
 
-
-    saveHistory();
 
     renderHistory();
 
-}
 
-
-/* =====================================================
-   SEARCH HISTORY
-===================================================== */
-
-function searchHistory() {
-
-    const search =
-        document.getElementById(
-            "historySearch"
-        ).value
-        .toLowerCase()
-        .trim();
-
-
-    if (!search) {
-
-        renderHistory();
-
-        return;
-
-    }
-
-
-    const filtered =
-        history.filter(
-            record =>
-
-                record.item
-                    .toLowerCase()
-                    .includes(search)
-
-                ||
-
-                record.category
-                    .toLowerCase()
-                    .includes(search)
-
-        );
-
-
-    renderHistory(
-        filtered
+    animateElement(
+        clearHistoryBtn,
+        "button-recorded"
     );
 
 }
@@ -1666,17 +1261,109 @@ function searchHistory() {
 
 function resetForm() {
 
-    itemInput.value =
-        "";
+    const measurementCard =
+        document.querySelector(
+            ".measurement-card"
+        );
 
-    weightInput.value =
-        "";
 
-    unitSelect.value =
+    itemInput.value = "";
+
+    weightInput.value = "";
+
+    unitSelect.value = "g";
+
+
+    weightDisplay.textContent =
+        "0.00";
+
+    displayUnit.textContent =
         "g";
 
 
-    updateScale();
+    itemIcon.textContent =
+        "❓";
+
+    itemName.textContent =
+        "No item detected";
+
+    itemCategory.textContent =
+        "—";
+
+    infoWeight.textContent =
+        "—";
+
+    servingSize.textContent =
+        "—";
+
+    calories100.textContent =
+        "—";
+
+    foodType.textContent =
+        "—";
+
+
+    resetNutrition();
+
+
+    if (measurementCard) {
+
+        measurementCard.classList.remove(
+            "resetting"
+        );
+
+        void measurementCard.offsetWidth;
+
+        measurementCard.classList.add(
+            "resetting"
+        );
+
+    }
+
+}
+
+
+/* =====================================================
+   SEARCH HISTORY
+===================================================== */
+
+function searchHistory() {
+
+    renderHistory(
+        historySearch.value
+    );
+
+}
+
+
+/* =====================================================
+   CAPITALIZE
+===================================================== */
+
+function capitalize(text) {
+
+    return text
+        .toLowerCase()
+        .replace(
+            /\b\w/g,
+            letter => letter.toUpperCase()
+        );
+
+}
+
+
+/* =====================================================
+   SECURITY
+===================================================== */
+
+function escapeHTML(text) {
+
+    const div =
+        document.createElement("div");
+
+    div.textContent = text;
+
+    return div.innerHTML;
 
 }
 
@@ -1703,40 +1390,63 @@ unitSelect.addEventListener(
 );
 
 
-document.getElementById(
-    "recordBtn"
-).addEventListener(
+recordBtn.addEventListener(
     "click",
     recordMeasurement
 );
 
 
-document.getElementById(
-    "resetBtn"
-).addEventListener(
+resetBtn.addEventListener(
     "click",
     resetForm
 );
 
 
-document.getElementById(
-    "clearHistoryBtn"
-).addEventListener(
+clearHistoryBtn.addEventListener(
     "click",
     clearHistory
 );
 
 
-document.getElementById(
-    "historySearch"
-).addEventListener(
+historySearch.addEventListener(
     "input",
     searchHistory
 );
 
 
 /* =====================================================
-   INITIALIZE
+   DELETE BUTTON EVENT
+===================================================== */
+
+historyTableBody.addEventListener(
+    "click",
+    event => {
+
+        const button =
+            event.target.closest(
+                ".delete-btn"
+            );
+
+
+        if (!button) {
+            return;
+        }
+
+
+        const id =
+            Number(
+                button.dataset.id
+            );
+
+
+        deleteHistory(id);
+
+    }
+);
+
+
+/* =====================================================
+   INITIALIZATION
 ===================================================== */
 
 renderHistory();
